@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: gitopswave-app
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: gitopswave
+
+  template:
+    metadata:
+      labels:
+        app: gitopswave
+
+    spec:
+      containers:
+      - name: gitopswave-container
+        image: yourdockerhub/gitopswave-app:v1
+        ports:
+        - containerPort: 5000
