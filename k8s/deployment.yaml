@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: gitopswave-container
-        image: yourdockerhub/gitopswave-app:v1
+        image: abhibadak01/gitopswave-app:v1
         ports:
         - containerPort: 5000
